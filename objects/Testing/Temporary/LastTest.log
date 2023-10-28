@@ -1,0 +1,247 @@
+Start testing: Oct 28 14:53 EDT
+----------------------------------------------------------
+1/6 Testing: BufferpoolTest.evictPage
+1/6 Test: BufferpoolTest.evictPage
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BufferpoolTest.evictPage"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BufferpoolTest.evictPage" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BufferpoolTest.evictPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BufferpoolTest
+[ RUN      ] BufferpoolTest.evictPage
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:24: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  3 - i
+    Which is: 2
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:24: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  3 - i
+    Which is: 1
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:28: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  0
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:29: Failure
+Expected equality of these values:
+  skeletonFile.writes
+    Which is: 0
+  1
+
+[  FAILED  ] BufferpoolTest.evictPage (0 ms)
+[----------] 1 test from BufferpoolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BufferpoolTest.evictPage
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BufferpoolTest.evictPage" end time: Oct 28 14:53 EDT
+"BufferpoolTest.evictPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: BufferpoolTest.flushAllPages
+2/6 Test: BufferpoolTest.flushAllPages
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BufferpoolTest.flushAllPages"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BufferpoolTest.flushAllPages" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BufferpoolTest.flushAllPages
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BufferpoolTest
+[ RUN      ] BufferpoolTest.flushAllPages
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:54: Failure
+Expected equality of these values:
+  skeletonFile.writes
+    Which is: 0
+  2
+
+[  FAILED  ] BufferpoolTest.flushAllPages (0 ms)
+[----------] 1 test from BufferpoolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BufferpoolTest.flushAllPages
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BufferpoolTest.flushAllPages" end time: Oct 28 14:53 EDT
+"BufferpoolTest.flushAllPages" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: BufferpoolTest.discardPage
+3/6 Test: BufferpoolTest.discardPage
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BufferpoolTest.discardPage"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BufferpoolTest.discardPage" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BufferpoolTest.discardPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BufferpoolTest
+[ RUN      ] BufferpoolTest.discardPage
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:76: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  2
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:80: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  2
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:84: Failure
+Expected equality of these values:
+  bufferpool.getPages().size()
+    Which is: 3
+  1
+
+[  FAILED  ] BufferpoolTest.discardPage (0 ms)
+[----------] 1 test from BufferpoolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BufferpoolTest.discardPage
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BufferpoolTest.discardPage" end time: Oct 28 14:53 EDT
+"BufferpoolTest.discardPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: BufferpoolTest.flushPage
+4/6 Test: BufferpoolTest.flushPage
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BufferpoolTest.flushPage"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BufferpoolTest.flushPage" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BufferpoolTest.flushPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BufferpoolTest
+[ RUN      ] BufferpoolTest.flushPage
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:116: Failure
+Expected equality of these values:
+  skeletonFile.writes
+    Which is: 0
+  1
+
+[  FAILED  ] BufferpoolTest.flushPage (0 ms)
+[----------] 1 test from BufferpoolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BufferpoolTest.flushPage
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BufferpoolTest.flushPage" end time: Oct 28 14:53 EDT
+"BufferpoolTest.flushPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: BufferpoolTest.flushPages
+5/6 Test: BufferpoolTest.flushPages
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BufferpoolTest.flushPages"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BufferpoolTest.flushPages" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BufferpoolTest.flushPages
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BufferpoolTest
+[ RUN      ] BufferpoolTest.flushPages
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:142: Failure
+Expected equality of these values:
+  skeletonFile.writes
+    Which is: 0
+  2
+
+/home/teona/Documents/courses/CS660/cs660-pa/tests/pa2/Bufferpool_test.cpp:145: Failure
+Expected equality of these values:
+  skeletonFile.writes
+    Which is: 0
+  2
+
+[  FAILED  ] BufferpoolTest.flushPages (0 ms)
+[----------] 1 test from BufferpoolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BufferpoolTest.flushPages
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BufferpoolTest.flushPages" end time: Oct 28 14:53 EDT
+"BufferpoolTest.flushPages" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: BTreeFileTest.findLeafPage
+6/6 Test: BTreeFileTest.findLeafPage
+Command: "/home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2/pa2_test" "--gtest_filter=BTreeFileTest.findLeafPage"
+Directory: /home/teona/Documents/courses/CS660/cs660-pa/objects/tests/pa2
+"BTreeFileTest.findLeafPage" start time: Oct 28 14:53 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/teona/Documents/courses/CS660/cs660-pa/objects/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BTreeFileTest.findLeafPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BTreeFileTest
+[ RUN      ] BTreeFileTest.findLeafPage
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Failed.
+"BTreeFileTest.findLeafPage" end time: Oct 28 14:53 EDT
+"BTreeFileTest.findLeafPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 28 14:53 EDT
