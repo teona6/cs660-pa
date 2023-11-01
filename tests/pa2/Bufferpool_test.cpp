@@ -2,8 +2,9 @@
 #include <db/Database.h>
 #include <db/SkeletonFile.h>
 #include <db/Utility.h>
-
 TEST(BufferpoolTest, evictPage) {
+    std::cout << "Starting evictPage Test..." << std::endl;
+
     db::Database::reset();
     db::BufferPool &bufferpool = db::Database::getBufferPool();
     db::Catalog &catalog = db::Database::getCatalog();
@@ -14,20 +15,30 @@ TEST(BufferpoolTest, evictPage) {
     db::SkeletonPageId page2(1, 1);
     db::SkeletonPageId page3(1, 2);
     bufferpool.getPage(&page1);
+    std::cout << "Pages in bufferpool after getting page1: " << bufferpool.getPages().size() << std::endl;
     bufferpool.getPage(&page2);
+    std::cout << "Pages in bufferpool after getting page2: " << bufferpool.getPages().size() << std::endl;
     auto page = bufferpool.getPage(&page3);
+    std::cout << "Pages in bufferpool after getting page3: " << bufferpool.getPages().size() << std::endl;
+
     db::TransactionId tid;
     page->markDirty(tid);
 
     EXPECT_EQ(skeletonFile.writes, 0);
     for (int i = 0; i < 3; i++) {
+        std::cout << "Attempting eviction " << i+1 << std::endl;
         EXPECT_EQ(bufferpool.getPages().size(), 3 - i);
         bufferpool.evictPage();
+        std::cout << "Pages remaining after eviction " << i+1 << ": " << bufferpool.getPages().size() << std::endl;
     }
 
     EXPECT_EQ(bufferpool.getPages().size(), 0);
     EXPECT_EQ(skeletonFile.writes, 1);
+
+    std::cout << "End of evictPage Test. Pages in bufferpool: " << bufferpool.getPages().size() << std::endl;
+    std::cout << "Total writes to skeletonFile: " << skeletonFile.writes << std::endl;
 }
+
 
 TEST(BufferpoolTest, flushAllPages) {
     db::Database::reset();
